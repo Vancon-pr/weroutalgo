@@ -19,7 +19,7 @@ class Manager:
         return False
 
     def run(self):
-        trajectory = self.__ship.calculate()  # пока не ясно нужно ли
+        trajectory = self.__ship.calculate(self.__map.get_map())
 
         # i -- счётчик времени 1 шаг в "1 секунду в секунду"
         for i in range(len(trajectory)):
